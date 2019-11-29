@@ -11,7 +11,7 @@ The goal of SpatialCellExperiment is to provide a S4 class for storing data from
 
 ## Installation
 
-You can install the released version of SpatialCellExperiment from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of SpatialCellExperiment from GitHub with:
 
 ``` r
 devtools::install_github("kevinrue/SpatialCellExperiment")
