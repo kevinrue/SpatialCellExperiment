@@ -1,8 +1,8 @@
 ---
-title: "Getting Started with SpatialExperiment"
+title: "Introduction to SpatialExperiment"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{SpatialExperiment}
+  %\VignetteIndexEntry{Introduction to SpatialExperiment}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -12,6 +12,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+library(BiocStyle)
 ```
 
 # Quick Start
@@ -54,6 +55,7 @@ sce
 Each cell is represented by a point coordinates
 
 This is not representative of the real geometry of cells, which could be better represented by a `SpatialPolygonExperiment` class.
+See the CRAN package `r CRANpkg("sf")` for a standardized way to encode spatial vector data.
 
 An intermediate modelling approach could be to summarize observations by tile, i.e., regular rectangular areas dividing the observed space.
 This could be implemented as a `SpatialTileExperiment`

@@ -16,8 +16,10 @@ Imports:
     S4Vectors
 RoxygenNote: 7.0.1
 Suggests: 
-    testthat (>= 2.1.0),
+    BiocStyle,
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 2.1.0)
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
+URL: https://kevinrue.github.io/SpatialCellExperiment, https://github.com/kevinrue/SpatialCellExperiment
