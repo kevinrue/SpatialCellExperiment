@@ -23,3 +23,4 @@ Suggests:
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 URL: https://kevinrue.github.io/SpatialCellExperiment, https://github.com/kevinrue/SpatialCellExperiment
+BugReports: https://github.com/kevinrue/SpatialCellExperiment/issues

@@ -7,7 +7,7 @@
 | Travis CI | Linux | [![Travis CI build status](https://travis-ci.org/kevinrue/SpatialCellExperiment.svg?branch=master)](https://travis-ci.org/kevinrue/SpatialCellExperiment) | [![Codecov.io coverage status](https://codecov.io/github/kevinrue/SpatialCellExperiment/coverage.svg?branch=master)](https://codecov.io/github/kevinrue/SpatialCellExperiment) |
 <!-- badges: end -->
 
-The goal of SpatialCellExperiment is to ...
+The goal of SpatialCellExperiment is to provide a S4 class for storing data from spatial single-cell experiments.
 
 ## Installation
 
