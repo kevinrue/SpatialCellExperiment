@@ -19,7 +19,7 @@ library(BiocStyle)
 
 Load the package.
 
-```{r setup}
+```{r setup, message=FALSE}
 library(SpatialCellExperiment)
 ```
 
