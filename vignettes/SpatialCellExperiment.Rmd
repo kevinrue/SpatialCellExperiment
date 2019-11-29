@@ -52,10 +52,14 @@ sce
 
 # The SpatialCellExperiment class
 
-Each cell is represented by a point coordinates
+In the `SpatialCellExperiment` class, each cell is represented by a point coordinates.
+This is clearly an over-simplification that does not reflect the geometry of individual cells in a tissue sample.
 
-This is not representative of the real geometry of cells, which could be better represented by a `SpatialPolygonExperiment` class.
-See the CRAN package `r CRANpkg("sf")` for a standardized way to encode spatial vector data.
+The CRAN package `r CRANpkg("sf")` provides support for simple features, a standardized way to encode spatial vector data.
+This could be used to implement a `SpatialPolygonExperiment` class, holding the precise geometry of cells, along with the usual metadata for genes and libraries.
 
-An intermediate modelling approach could be to summarize observations by tile, i.e., regular rectangular areas dividing the observed space.
-This could be implemented as a `SpatialTileExperiment`
+An intermediate modelling approach could be to summarize observations by tile, i.e., regular areas dividing the observed space evenly.
+Each tile would then summarize the features detected in the correspondig area.
+Note that tiles could be rectangles, hexagons, or any polygon that can divide a plane into a regular mesh.
+This could be implemented as a `SpatialTileExperiment`.
+Distinct polygons might require specialized sub-classes.
