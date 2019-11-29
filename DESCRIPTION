@@ -1,0 +1,23 @@
+Package: SpatialCellExperiment
+Title: S4 Classes for Spatial Single Cell Data
+Version: 0.0.1
+Authors@R: c(person("Kevin", "Rue-Albrecht", role = "cre", email = "kevin.rue-albrecht@kennedy.ox.ac.uk", comment = c(ORCID = "0000-0003-3899-3872")))
+Description: Defines a S4 class for storing data from spatial single-cell
+        experiments. This includes specialized methods to store and
+        retrieve spatial information, along with the
+        usual metadata for genes and libraries.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: SingleCellExperiment
+Imports:
+    BiocGenerics,
+    methods,
+    S4Vectors
+RoxygenNote: 7.0.1
+Suggests: 
+    testthat (>= 2.1.0),
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)

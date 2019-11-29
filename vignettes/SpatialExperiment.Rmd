@@ -1,0 +1,59 @@
+---
+title: "Getting Started with SpatialExperiment"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{SpatialExperiment}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Quick Start
+
+Load the package.
+
+```{r setup}
+library(SpatialCellExperiment)
+```
+
+Generate some toy data representing a spatial single-cell RNA-sequencing experiment for 100 cells associated with 3D coordinates:
+
+- a count matrix _u_
+- a matrix of cell coordinates
+
+```{r}
+ncells <- 100
+u <- matrix(rpois(20000, 5), ncol=ncells)
+v <- log2(u + 1)
+
+coordinates <- matrix(runif(ncells*3), ncells)
+colnames(coordinates) <- c("x", "y", "z")
+```
+
+Create a `SpatialCellExperiment`.
+
+```{r}
+sce <- SpatialCellExperiment(assays=list(counts=u, logcounts=v),
+    spatialDim=coordinates)
+```
+
+Visualize the `SpatialCellExperiment`.
+
+```{r}
+sce
+```
+
+# The SpatialCellExperiment class
+
+Each cell is represented by a point coordinates
+
+This is not representative of the real geometry of cells, which could be better represented by a `SpatialPolygonExperiment` class.
+
+An intermediate modelling approach could be to summarize observations by tile, i.e., regular rectangular areas dividing the observed space.
+This could be implemented as a `SpatialTileExperiment`
