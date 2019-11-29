@@ -54,6 +54,7 @@ sce
 
 In the `SpatialCellExperiment` class, each cell is represented by a point coordinates.
 This is clearly an over-simplification that does not reflect the geometry of individual cells in a tissue sample.
+However, this lightweight representation allows rapid calculation of the distance between cells.
 
 The CRAN package `r CRANpkg("sf")` provides support for simple features, a standardized way to encode spatial vector data.
 This could be used to implement a `SpatialPolygonExperiment` class, holding the precise geometry of cells, along with the usual metadata for genes and libraries.
